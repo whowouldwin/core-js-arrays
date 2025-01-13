@@ -509,8 +509,10 @@ function getMaxItems(arr, n) {
  *    findCommonElements(['a', 'b', 'c'], ['b', 'c', 'd']) => [ 'b', 'c' ]
  *    findCommonElements([1, 2, 3], ['a', 'b', 'c']) => []
  */
-function findCommonElements(/* arr1, arr2 */) {
-  throw new Error('Not implemented');
+function findCommonElements(arr1, arr2) {
+  const set1 = new Set(arr1);
+  const set2 = new Set(arr2);
+  return [...set1].filter((item) => set2.has(item));
 }
 
 /**
